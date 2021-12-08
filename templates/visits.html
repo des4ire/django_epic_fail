@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+    <ul>
+        {% for visit in visits %}
+            <li>
+                <a href="{% url 'get-visit' visit_id=visit.id %}">
+                    ID: {{ visit.id }} <br>
+                    <strong>Name: {{ visit.student }} </strong> <br>
+                    <p>Math: {{ visit.math }}<p>
+                    <p>English: {{ visit.english }}<p>
+                    <p>Science: {{visit.science}}<p>
+                    
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
